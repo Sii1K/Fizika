@@ -1,6 +1,5 @@
 import pygame
 
-isElastic = True
 
 pygame.init()
 win = pygame.display.set_mode((1200, 500))
@@ -49,9 +48,12 @@ ball1 = Circle(100, 317, 36, 400, 20)
 
 ball2 = Circle(500, 317, 36, 600, 0)
 
+isElastic = True
+
 
 def draw():
     win.blit(backround, (0, 0))
+    pygame.draw.rect(win, (169, 69, 19), (10, 20, 30, 50))
     ball1.draw(1)
     ball2.draw(2)
     pygame.display.update()
